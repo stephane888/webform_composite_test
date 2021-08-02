@@ -1,0 +1,54 @@
+services:
+  webform_composite_test.pieces:
+    class: Drupal\webform_composite_test\Services\Pieces
+    arguments: ['@webform_composite_test.travaux','@webform_composite_test.cuisine', '@webform_composite_test.salle_de_bain','@webform_composite_test.buanderie','@webform_composite_test.toilettes','@webform_composite_test.medias_medias']
+  
+  webform_composite_test.cuisine:
+    class: Drupal\webform_composite_test\Services\Cuisine
+    arguments: []
+    
+  webform_composite_test.salle_de_bain:
+    class: Drupal\webform_composite_test\Services\SalleDeBain
+    arguments: []
+    
+  webform_composite_test.buanderie:
+    class: Drupal\webform_composite_test\Services\Buanderie
+    arguments: []
+    
+  webform_composite_test.toilettes:
+    class: Drupal\webform_composite_test\Services\Toilettes
+    arguments: []
+
+  webform_composite_test.travaux:
+    class: Drupal\webform_composite_test\Services\Travaux
+    arguments: ['@webform_composite_test.renovation','@webform_composite_test.cloisons','@webform_composite_test.revetement','@webform_composite_test.electricite']
+    
+  webform_composite_test.renovation:
+    class: Drupal\webform_composite_test\Services\Travaux\Renovation
+    arguments: []
+  
+  webform_composite_test.cloisons:
+    class: Drupal\webform_composite_test\Services\Travaux\Cloisons
+    arguments: []
+  
+  webform_composite_test.revetement:
+    class: Drupal\webform_composite_test\Services\Travaux\Revetement
+    arguments: []
+    
+  webform_composite_test.electricite:
+    class: Drupal\webform_composite_test\Services\Travaux\Electricite
+    arguments: []  
+
+  webform_composite_test.generatesummay:
+    class: Drupal\webform_composite_test\Services\GenerateSummay
+    arguments: ['@webform_composite_test.listprice'] 
+    
+  webform_composite_test.listprice:
+    class: Drupal\webform_composite_test\Services\ListPrice
+    arguments: [] 
+    
+  webform_composite_test.medias_medias:
+    class: Drupal\webform_composite_test\Services\Medias\Medias
+    arguments: []
+    
+    
