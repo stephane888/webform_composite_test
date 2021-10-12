@@ -1,0 +1,6 @@
+webform_composite_test.settings_form:
+  title: Webform Composite test
+  description: Configure Webform Composite test.
+  parent: system.admin_config_system
+  route_name: webform_composite_test.settings_form
+  weight: 10

@@ -1,0 +1,15 @@
+webform_composite_test.example:
+  path: '/webform-composite-test/example'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\webform_composite_test\Controller\WebformCompositeTestController::build'
+  requirements:
+    _permission: 'access content'
+
+webform_composite_test.settings_form:
+  path: '/admin/config/system/webform-composite-test'
+  defaults:
+    _title: 'Webform Composite test settings'
+    _form: 'Drupal\webform_composite_test\Form\SettingsForm'
+  requirements:
+    _permission: 'administer webform_composite_test configuration'
